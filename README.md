@@ -53,9 +53,9 @@ Bibliothèques requises : pandas, duckdb, matplotlib, seaborn, numpy, openpyxl
 ## 👀 6. Instructions d'installation
 1. Cloner le dépôt ou placer le notebook dans votre environnement de travail (JupyterLab).
 2. Installer les dépendances si nécessaire :
-# pip install pandas matplotlib seaborn numpy openpyxl --> 
-# pip install pandera duckdb --> pour créer des schémas et des requetes sql
-# pip install reportlab xlsxwriter pillow kaleido --> pour exporter le rapport en PDF et Excel
+    - pip install pandas matplotlib seaborn numpy openpyxl --> 
+    - pip install pandera duckdb --> pour créer des schémas et des requetes sql
+    - pip install reportlab xlsxwriter pillow kaleido --> pour exporter le rapport en PDF et Excel
 3. Ouvrir et exécuter séquentiellement les cellules du notebook analyse_vente_bottleneck_IA.ipynb
 
 
