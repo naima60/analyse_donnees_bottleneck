@@ -66,7 +66,6 @@
     .font-editorial {
       font-family: 'Playfair Display', Georgia, serif;
     }
-    /* Animations subtiles au défilement */
     .reveal {
       opacity: 0;
       transform: translateY(18px);
@@ -76,7 +75,6 @@
       opacity: 1;
       transform: translateY(0);
     }
-    /* Custom scrollbar discrète */
     ::-webkit-scrollbar {
       width: 8px;
       height: 8px;
@@ -97,31 +95,32 @@
 
   <!-- ==================== NAVIGATION STICKY ==================== -->
   <header class="sticky top-0 z-50 bg-cream/90 backdrop-blur-md border-b border-stone-200/80 transition-all">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16 md:h-20">
+    <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between gap-8 xl:gap-12 h-16 md:h-20">
         <!-- Identité / Logo -->
-        <a href="#presentation" class="flex items-center gap-3 group">
+        <a href="#presentation" class="flex items-center gap-3 group shrink-0">
           <div class="w-10 h-10 rounded-xl bg-bordeaux text-white flex items-center justify-center font-editorial font-bold text-lg shadow-sm group-hover:bg-bordeaux-dark transition">
             NB
           </div>
-          <div>
+          <div class="hidden sm:block whitespace-nowrap">
             <span class="block font-editorial font-bold text-base sm:text-lg text-ink leading-tight">Naima Boutrah</span>
-            <span class="block text-xs font-medium text-gold tracking-wider uppercase">Data Analyst • Portfolio</span>
+            <span class="block text-xs font-medium text-gold tracking-wider uppercase">Data Analyst</span>
           </div>
         </a>
 
         <!-- Liens Desktop -->
-        <nav class="hidden lg:flex items-center gap-1 xl:gap-2 text-sm font-medium text-muted">
-          <a href="#presentation" class="px-3 py-2 rounded-lg hover:text-bordeaux hover:bg-bordeaux-soft/60 transition">Présentation</a>
-          <a href="#kpis-dashboard" class="px-3 py-2 rounded-lg hover:text-bordeaux hover:bg-bordeaux-soft/60 transition">Chiffres Clés & Dashboard</a>
-          <a href="#demarche" class="px-3 py-2 rounded-lg hover:text-bordeaux hover:bg-bordeaux-soft/60 transition">Démarche & Compétences</a>
-          <a href="#audit-anomalies" class="px-3 py-2 rounded-lg hover:text-bordeaux hover:bg-bordeaux-soft/60 transition">Audit & Anomalies</a>
-          <a href="#veille-cdc" class="px-3 py-2 rounded-lg hover:text-bordeaux hover:bg-bordeaux-soft/60 transition">Veille & Cahier des charges</a>
-          <a href="#recommandations" class="px-3 py-2 rounded-lg hover:text-bordeaux hover:bg-bordeaux-soft/60 transition">Recommandations & Formation</a>
+        <nav class="hidden xl:flex items-center justify-end gap-1 ml-auto text-sm font-medium text-muted">
+          <a href="#presentation" class="px-3 py-2 rounded-lg whitespace-nowrap hover:text-bordeaux hover:bg-bordeaux-soft/60 transition">Présentation</a>
+          <a href="#kpis-dashboard" class="px-3 py-2 rounded-lg whitespace-nowrap hover:text-bordeaux hover:bg-bordeaux-soft/60 transition">Dashboard</a>
+          <a href="#demarche" class="px-3 py-2 rounded-lg whitespace-nowrap hover:text-bordeaux hover:bg-bordeaux-soft/60 transition">Démarche</a>
+          <a href="#audit-anomalies" class="px-3 py-2 rounded-lg whitespace-nowrap hover:text-bordeaux hover:bg-bordeaux-soft/60 transition">Audit</a>
+          <a href="#veille-cdc" class="px-3 py-2 rounded-lg whitespace-nowrap hover:text-bordeaux hover:bg-bordeaux-soft/60 transition">Veille &amp; CDC</a>
+          <a href="#recommandations" class="px-3 py-2 rounded-lg whitespace-nowrap hover:text-bordeaux hover:bg-bordeaux-soft/60 transition">Recommandations</a>
+          <a href="#preuves-complementaires" class="px-3 py-2 rounded-lg whitespace-nowrap hover:text-bordeaux hover:bg-bordeaux-soft/60 transition">Preuves &amp; Contact</a>
         </nav>
 
         <!-- Bouton Mobile Menu -->
-        <button id="mobile-menu-btn" aria-label="Ouvrir le menu" class="lg:hidden p-2.5 rounded-xl border border-stone-200 bg-white text-ink hover:bg-creamDark transition">
+        <button id="mobile-menu-btn" aria-label="Ouvrir le menu" class="xl:hidden p-2.5 rounded-xl border border-stone-200 bg-white text-ink hover:bg-creamDark transition">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
           </svg>
@@ -130,13 +129,16 @@
     </div>
 
     <!-- Menu Mobile Déroulant -->
-    <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-stone-200 px-4 pt-2 pb-4 space-y-1 shadow-lg">
+    <div id="mobile-menu" class="hidden xl:hidden bg-white border-b border-stone-200 px-4 pt-2 pb-4 space-y-1 shadow-lg">
       <a href="#presentation" class="mobile-link block px-3 py-2.5 rounded-lg text-sm font-medium text-ink hover:bg-bordeaux-soft hover:text-bordeaux">Présentation</a>
       <a href="#kpis-dashboard" class="mobile-link block px-3 py-2.5 rounded-lg text-sm font-medium text-ink hover:bg-bordeaux-soft hover:text-bordeaux">Chiffres Clés & Dashboard</a>
       <a href="#demarche" class="mobile-link block px-3 py-2.5 rounded-lg text-sm font-medium text-ink hover:bg-bordeaux-soft hover:text-bordeaux">Démarche & Compétences</a>
       <a href="#audit-anomalies" class="mobile-link block px-3 py-2.5 rounded-lg text-sm font-medium text-ink hover:bg-bordeaux-soft hover:text-bordeaux">Audit & Anomalies</a>
       <a href="#veille-cdc" class="mobile-link block px-3 py-2.5 rounded-lg text-sm font-medium text-ink hover:bg-bordeaux-soft hover:text-bordeaux">Veille & Cahier des charges</a>
       <a href="#recommandations" class="mobile-link block px-3 py-2.5 rounded-lg text-sm font-medium text-ink hover:bg-bordeaux-soft hover:text-bordeaux">Recommandations & Formation</a>
+      <a href="#preuves-complementaires" class="mobile-link block px-3 py-2.5 rounded-lg text-sm font-medium text-ink hover:bg-bordeaux-soft hover:text-bordeaux">Autres preuves (niveaux 2 et 3)</a>
+      <a href="#parcours" class="mobile-link block px-3 py-2.5 rounded-lg text-sm font-medium text-ink hover:bg-bordeaux-soft hover:text-bordeaux">Parcours</a>
+      <a href="#contact" class="mobile-link block px-3 py-2.5 rounded-lg text-sm font-medium text-ink hover:bg-bordeaux-soft hover:text-bordeaux">Me contacter</a>
     </div>
   </header>
 
@@ -147,7 +149,7 @@
     <div class="absolute bottom-0 left-0 translate-y-1/3 -translate-x-1/4 w-96 h-96 rounded-full bg-gold/10 blur-3xl pointer-events-none"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
         
         <!-- Colonne Principale -->
         <div class="lg:col-span-8 space-y-6">
@@ -156,13 +158,16 @@
             Portfolio Professionnel • Data Analyst • Étude de cas BottleNeck
           </div>
 
-          <h1 class="font-editorial text-3xl sm:text-4xl lg:text-5xl xl:text-[3.25rem] font-bold text-ink leading-[1.15] tracking-tight">
-            Naima Boutrah — <span class="text-bordeaux">Pilotez la donnée</span> pour optimiser la rentabilité et le BFR
-          </h1>
+          <div class="space-y-4">
+            <h1 class="font-editorial text-3xl sm:text-4xl lg:text-5xl xl:text-[3.35rem] font-bold text-ink leading-[1.12] tracking-tight">
+              Naima Boutrah
+            </h1>
 
-          <p class="text-base sm:text-lg text-muted leading-relaxed max-w-3xl">
-            Audit multi-sources ERP / E-commerce, détection statistique d'anomalies et pilotage stratégique des stocks pour un négociant en vins et spiritueux (Données d'octobre • Formation Data Analyst 2025/2026).
-          </p>
+            <!-- Paragraphe unique : Présentation & Positionnement -->
+            <p class="text-base sm:text-[1.075rem] text-ink/90 leading-relaxed max-w-3xl">
+              Ancienne <strong class="font-semibold text-ink">cheffe comptable (5 ans)</strong> , <strong class="font-semibold text-ink">consultante formatrice Sage (11 ans)</strong> et récemment diplômée en <strong class="font-semibold text-bordeaux">Data Analyst</strong>, ce portfolio structure mes preuves par niveau de maîtrise et illustre comment ma veille métier et technologique a transformé ma façon de travailler.
+            </p>
+          </div>
 
           <!-- Badges Stack Technique -->
           <div class="pt-1">
@@ -175,16 +180,13 @@
                 <span class="w-2 h-2 rounded-full bg-gold"></span> SQL Analytique (DuckDB)
               </span>
               <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white border border-stone-200 text-xs sm:text-sm font-mono font-medium text-ink shadow-sm">
-                <span class="w-2 h-2 rounded-full bg-bordeaux"></span> Pandera (Data Quality)
-              </span>
-              <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white border border-stone-200 text-xs sm:text-sm font-mono font-medium text-ink shadow-sm">
                 <span class="w-2 h-2 rounded-full bg-emerald-600"></span> JupyterLab
               </span>
             </div>
           </div>
 
           <!-- Boutons d'action -->
-          <div class="flex flex-col sm:flex-row gap-3.5 pt-3">
+          <div class="flex flex-col sm:flex-row gap-3.5 pt-2">
             <a href="#kpis-dashboard" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-bordeaux hover:bg-bordeaux-dark text-white font-semibold text-sm sm:text-base shadow-md hover:shadow-lg transition">
               <span>Explorer le Dashboard Analytique</span>
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
@@ -197,7 +199,7 @@
         </div>
 
         <!-- Carte de Synthèse Executive à droite -->
-        <div class="lg:col-span-4">
+        <div class="lg:col-span-4 lg:mt-4">
           <div class="bg-white rounded-2xl border border-stone-200/90 p-6 sm:p-7 shadow-card space-y-5">
             <div class="flex items-center justify-between border-b border-stone-100 pb-4">
               <div>
@@ -218,15 +220,15 @@
             <ul class="space-y-2.5 text-sm">
               <li class="flex items-start gap-2.5">
                 <span class="mt-1 w-4 h-4 rounded-full bg-bordeaux-soft text-bordeaux flex items-center justify-center text-xs font-bold shrink-0">✓</span>
-                <span><strong class="text-ink">Objectif 1 :</strong> Réconcilier 100 % des flux ERP, Web et Liaison via un pipeline reproductible.</span>
+                <span><strong class="text-ink">Objectif 1 :</strong> Réconcilier les flux ERP et la table Liaison via un pipeline reproductible.</span>
               </li>
               <li class="flex items-start gap-2.5">
                 <span class="mt-1 w-4 h-4 rounded-full bg-bordeaux-soft text-bordeaux flex items-center justify-center text-xs font-bold shrink-0">✓</span>
-                <span><strong class="text-ink">Objectif 2 :</strong> Isoler les valeurs atypiques et corriger les 124 anomalies critiques du catalogue.</span>
+                <span><strong class="text-ink">Objectif 2 :</strong> Isoler les valeurs atypiques et identifier les anomalies critiques du catalogue.</span>
               </li>
               <li class="flex items-start gap-2.5">
                 <span class="mt-1 w-4 h-4 rounded-full bg-bordeaux-soft text-bordeaux flex items-center justify-center text-xs font-bold shrink-0">✓</span>
-                <span><strong class="text-ink">Objectif 3 :</strong> Libérer la trésorerie immobilisée sur les stocks dormants (Flop 20).</span>
+                <span><strong class="text-ink">Objectif 3 :</strong> Libérer la trésorerie immobilisée sur les stocks dormants.</span>
               </li>
             </ul>
 
@@ -506,12 +508,12 @@
             </div>
             <h3 class="font-editorial text-lg font-bold text-ink">Ingénierie des données & Réconciliation ERP/Web</h3>
             <p class="text-sm text-muted mt-2.5 leading-relaxed">
-              Orchestration via <strong>DuckDB, Pandas et Pandera</strong> : traitement des clés orphelines, élimination des doublons techniques WooCommerce (<code class="text-xs bg-stone-100 px-1 rounded">post_type = product</code>) et validation stricte des schémas aboutissant à <strong>733 références réconciliées</strong>.
+              Orchestration via <strong>DuckDB et Pandas</strong> : traitement des clés orphelines, élimination des doublons techniques WooCommerce (<code class="text-xs bg-stone-100 px-1 rounded">post_type = product</code>) et validation stricte aboutissant à <strong>733 références réconciliées</strong>.
             </p>
           </div>
           <div class="mt-5 pt-3 border-t border-stone-100 flex flex-wrap gap-1.5">
             <span class="text-[11px] font-mono bg-cream px-2 py-0.5 rounded border border-stone-200">DuckDB</span>
-            <span class="text-[11px] font-mono bg-cream px-2 py-0.5 rounded border border-stone-200">Pandera</span>
+            <span class="text-[11px] font-mono bg-cream px-2 py-0.5 rounded border border-stone-200">Pandas</span>
             <span class="text-[11px] font-mono bg-cream px-2 py-0.5 rounded border border-stone-200">Zero Doublon</span>
           </div>
         </div>
@@ -592,63 +594,6 @@
           </div>
         </div>
 
-      </div>
-
-      <!-- Bloc Code : Aperçu du Pipeline Technique (DuckDB & Pandera) -->
-      <div class="bg-[#181A1F] text-stone-200 rounded-2xl border border-stone-800 shadow-xl overflow-hidden reveal">
-        <div class="flex flex-wrap items-center justify-between gap-3 px-5 py-3.5 bg-[#21242B] border-b border-stone-700/80">
-          <div class="flex items-center gap-2">
-            <span class="w-3 h-3 rounded-full bg-rose-500"></span>
-            <span class="w-3 h-3 rounded-full bg-amber-400"></span>
-            <span class="w-3 h-3 rounded-full bg-emerald-500"></span>
-            <span class="ml-2 font-mono text-xs text-stone-300 font-semibold">Aperçu du Pipeline Technique — DuckDB & Pandera (analyse_vente_bottleneck_IA.ipynb)</span>
-          </div>
-          <button id="copy-code-btn" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-stone-700/70 hover:bg-stone-600 text-xs font-mono text-stone-200 transition">
-            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
-            <span id="copy-code-label">Copier l'extrait</span>
-          </button>
-        </div>
-        <pre id="pipeline-code" class="p-5 sm:p-6 text-xs sm:text-sm font-mono leading-relaxed overflow-x-auto"><code><span class="text-purple-400">import</span> duckdb
-<span class="text-purple-400">import</span> pandera <span class="text-purple-400">as</span> pa
-<span class="text-purple-400">from</span> pandera <span class="text-purple-400">import</span> Column, Check
-
-<span class="text-stone-400"># 1. Réconciliation relationnelle haute performance via SQL DuckDB</span>
-query_reconciliation = <span class="text-amber-300">"""
-WITH web_clean AS (
-    SELECT DISTINCT sku AS id_web, post_title, total_sales, post_status
-    FROM df_web
-    WHERE post_type = 'product' AND sku IS NOT NULL
-)
-SELECT 
-    e.product_id,
-    l.id_web,
-    w.post_title,
-    e.price AS prix_vente,
-    e.purchase_price AS prix_achat,
-    e.stock_quantity,
-    e.stock_status,
-    COALESCE(w.total_sales, 0) AS ventes_octobre,
-    ROUND(((e.price - e.purchase_price) / NULLIF(e.purchase_price, 0)) * 100, 2) AS taux_marge_pct
-FROM df_erp e
-LEFT JOIN df_liaison l ON e.product_id = l.product_id
-LEFT JOIN web_clean w ON CAST(l.id_web AS VARCHAR) = CAST(w.id_web AS VARCHAR)
-"""</span>
-df_master = duckdb.query(query_reconciliation).to_df()
-
-<span class="text-stone-400"># 2. Contrat de qualité des données (Data Quality Gate) avec Pandera</span>
-schema_bottleneck = pa.DataFrameSchema({
-    <span class="text-emerald-300">"product_id"</span>: Column(int, checks=Check.gt(0), unique=<span class="text-sky-400">True</span>),
-    <span class="text-emerald-300">"prix_vente"</span>: Column(float, checks=Check.gt(0), nullable=<span class="text-sky-400">False</span>),
-    <span class="text-emerald-300">"prix_achat"</span>: Column(float, checks=Check.gt(0), nullable=<span class="text-sky-400">False</span>),
-    <span class="text-emerald-300">"stock_quantity"</span>: Column(int, checks=Check.ge(0)),
-    <span class="text-emerald-300">"taux_marge_pct"</span>: Column(float, checks=Check.gt(0)) <span class="text-stone-400"># Alerte immédiate si vente à perte</span>
-})
-
-<span class="text-stone-400"># Validation en mode lazy pour isoler les 124 anomalies sans bloquer l'audit</span>
-<span class="text-purple-400">try</span>:
-    schema_bottleneck.validate(df_master, lazy=<span class="text-sky-400">True</span>)
-<span class="text-purple-400">except</span> pa.errors.SchemaErrors <span class="text-purple-400">as</span> err:
-    anomalies_detectees = err.failure_cases</code></pre>
       </div>
 
     </div>
@@ -778,7 +723,7 @@ schema_bottleneck = pa.DataFrameSchema({
           <span class="inline-block px-3 py-1 rounded-lg bg-petrol-soft text-petrol text-xs font-bold">Veille Technologique • Modern Data Stack</span>
           <h3 class="font-editorial text-xl font-bold text-ink">Architecture Hybride Python + DuckDB</h3>
           <p class="text-sm text-muted leading-relaxed">
-            L'intégration in-process de <strong>DuckDB</strong> au sein de Python permet d'exécuter des jointures analytiques SQL complexes à très haute vitesse sans infrastructure serveur lourde, couplée à <strong>Pandera</strong> pour automatiser les tests unitaires sur les DataFrames.
+            L'intégration in-process de <strong>DuckDB</strong> au sein de Python permet d'exécuter des jointures analytiques SQL complexes à très haute vitesse sans infrastructure serveur lourde.
           </p>
           <div class="pt-2 text-xs font-semibold text-petrol">Application : Pipeline 100 % reproductible et auditable.</div>
         </div>
@@ -822,7 +767,7 @@ schema_bottleneck = pa.DataFrameSchema({
               <tr>
                 <td class="py-3.5 px-4 font-mono font-bold text-bordeaux">CF-04</td>
                 <td class="py-3.5 px-4 font-semibold text-ink">Audit Statistique Outliers</td>
-                <td class="py-3.5 px-4 text-muted">Exécuter mensuellement le script Pandera/DuckDB et soumettre les prix atypiques à validation Achats.</td>
+                <td class="py-3.5 px-4 text-muted">Exécuter mensuellement le script DuckDB et soumettre les prix atypiques à validation Achats.</td>
                 <td class="py-3.5 px-4 text-xs font-medium text-emerald-700">Rapport d'exception généré en &lt; 5 secondes.</td>
               </tr>
               <tr>
@@ -1017,6 +962,125 @@ schema_bottleneck = pa.DataFrameSchema({
     </div>
   </section>
 
+  <!-- ==================== NIVEAU 2 ET NIVEAU 3 ==================== -->
+  <section id="preuves-complementaires" class="py-16 sm:py-20 bg-creamDark/60 border-y border-stone-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-14">
+      <div class="max-w-3xl reveal">
+        <span class="text-xs font-bold uppercase tracking-widest text-bordeaux">07 • Autres preuves de compétences</span>
+        <h2 class="font-editorial text-2xl sm:text-3xl lg:text-4xl font-bold text-ink mt-2">Niveau 2 : preuves complémentaires</h2>
+        <p class="text-muted text-sm sm:text-base mt-3 leading-relaxed">
+          BottleNeck est ma preuve phare (niveau 1). Ces projets montrent d'autres outils et d'autres types de problèmes : machine learning, data engineering, statistiques, bases de données et Power BI.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 reveal">
+        <div class="bg-white rounded-2xl border border-stone-200 p-6 shadow-card hover:shadow-cardHover transition flex flex-col">
+          <span class="text-xs font-bold tracking-wider text-gold">Machine learning</span>
+          <h3 class="font-editorial text-xl font-bold text-ink mt-2">Détection de faux billets</h3>
+          <p class="text-sm text-muted mt-3 leading-relaxed">Modèle de régression logistique pour l'ONCFM, sauvegardé dans un pipeline et utilisable en ligne de commande avec le script detect_billets.py.</p>
+          <div class="flex flex-wrap gap-2 mt-4"><span class="px-2.5 py-1 rounded-md bg-petrol-soft text-petrol text-xs font-semibold">Python</span><span class="px-2.5 py-1 rounded-md bg-petrol-soft text-petrol text-xs font-semibold">Régression logistique</span><span class="px-2.5 py-1 rounded-md bg-petrol-soft text-petrol text-xs font-semibold">Pipeline joblib</span></div>
+        </div>
+        <div class="bg-white rounded-2xl border border-stone-200 p-6 shadow-card hover:shadow-cardHover transition flex flex-col">
+          <span class="text-xs font-bold tracking-wider text-gold">Machine learning</span>
+          <h3 class="font-editorial text-xl font-bold text-ink mt-2">Export de volaille : quels pays cibler ?</h3>
+          <p class="text-sm text-muted mt-3 leading-relaxed">Analyse complète, de la collecte au nettoyage des données, puis ACP et clustering pour regrouper les pays. Les groupes obtenus aident une entreprise à choisir ses marchés d'export.</p>
+          <div class="flex flex-wrap gap-2 mt-4"><span class="px-2.5 py-1 rounded-md bg-petrol-soft text-petrol text-xs font-semibold">ACP</span><span class="px-2.5 py-1 rounded-md bg-petrol-soft text-petrol text-xs font-semibold">Clustering</span><span class="px-2.5 py-1 rounded-md bg-petrol-soft text-petrol text-xs font-semibold">Réduction de dimensions</span><span class="px-2.5 py-1 rounded-md bg-petrol-soft text-petrol text-xs font-semibold">Aide à la décision</span></div>
+        </div>
+        <div class="bg-white rounded-2xl border border-stone-200 p-6 shadow-card hover:shadow-cardHover transition flex flex-col">
+          <span class="text-xs font-bold tracking-wider text-gold">Data engineering</span>
+          <h3 class="font-editorial text-xl font-bold text-ink mt-2">Profil sociodémographique des étudiants Data d'OpenClassrooms</h3>
+          <p class="text-sm text-muted mt-3 leading-relaxed">Analyse de l'évolution du profil des étudiants Data, avec une chaîne de transformation des données construite avec dbt sur l'entrepôt Snowflake.</p>
+          <div class="flex flex-wrap gap-2 mt-4"><span class="px-2.5 py-1 rounded-md bg-petrol-soft text-petrol text-xs font-semibold">dbt</span><span class="px-2.5 py-1 rounded-md bg-petrol-soft text-petrol text-xs font-semibold">Snowflake</span><span class="px-2.5 py-1 rounded-md bg-petrol-soft text-petrol text-xs font-semibold">SQL</span></div>
+        </div>
+        <div class="bg-white rounded-2xl border border-stone-200 p-6 shadow-card hover:shadow-cardHover transition flex flex-col">
+          <span class="text-xs font-bold tracking-wider text-gold">Analyse statistique</span>
+          <h3 class="font-editorial text-xl font-bold text-ink mt-2">Santé publique : données FAO</h3>
+          <p class="text-sm text-muted mt-3 leading-relaxed">Étude statistique de la faim dans le monde, avec visualisation de l'insécurité alimentaire.</p>
+          <div class="flex flex-wrap gap-2 mt-4"><span class="px-2.5 py-1 rounded-md bg-petrol-soft text-petrol text-xs font-semibold">Python</span><span class="px-2.5 py-1 rounded-md bg-petrol-soft text-petrol text-xs font-semibold">Pandas</span><span class="px-2.5 py-1 rounded-md bg-petrol-soft text-petrol text-xs font-semibold">Matplotlib</span><span class="px-2.5 py-1 rounded-md bg-petrol-soft text-petrol text-xs font-semibold">Seaborn</span></div>
+        </div>
+        <div class="bg-white rounded-2xl border border-stone-200 p-6 shadow-card hover:shadow-cardHover transition flex flex-col">
+          <span class="text-xs font-bold tracking-wider text-gold">Bases de données</span>
+          <h3 class="font-editorial text-xl font-bold text-ink mt-2">Base de données immobilière conforme au RGPD</h3>
+          <p class="text-sm text-muted mt-3 leading-relaxed">Modélisation, conception et interrogation d'une base de données qui respecte la protection des données personnelles.</p>
+          <div class="flex flex-wrap gap-2 mt-4"><span class="px-2.5 py-1 rounded-md bg-petrol-soft text-petrol text-xs font-semibold">SQL</span><span class="px-2.5 py-1 rounded-md bg-petrol-soft text-petrol text-xs font-semibold">Modélisation</span><span class="px-2.5 py-1 rounded-md bg-petrol-soft text-petrol text-xs font-semibold">RGPD</span></div>
+        </div>
+        <div class="bg-white rounded-2xl border border-stone-200 p-6 shadow-card hover:shadow-cardHover transition flex flex-col">
+          <span class="text-xs font-bold tracking-wider text-gold">Business intelligence</span>
+          <h3 class="font-editorial text-xl font-bold text-ink mt-2">Tableau de bord de suivi de projets</h3>
+          <p class="text-sm text-muted mt-3 leading-relaxed">Indicateurs d'avancement et alertes visuelles dans Power BI.</p>
+          <div class="flex flex-wrap gap-2 mt-4"><span class="px-2.5 py-1 rounded-md bg-petrol-soft text-petrol text-xs font-semibold">Power BI</span><span class="px-2.5 py-1 rounded-md bg-petrol-soft text-petrol text-xs font-semibold">DAX</span><span class="px-2.5 py-1 rounded-md bg-petrol-soft text-petrol text-xs font-semibold">Tableau de bord</span></div>
+        </div>
+      </div>
+
+      <div class="max-w-3xl reveal">
+        <h2 class="font-editorial text-2xl sm:text-3xl font-bold text-ink">Niveau 3 : socle</h2>
+        <p class="text-muted text-sm sm:text-base mt-3 leading-relaxed">Les bases solides sur lesquelles tout repose.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 reveal">
+        <div class="bg-white rounded-xl border border-stone-200 p-5 shadow-card">
+          <span class="text-xs font-semibold text-petrol">Excel</span>
+          <h3 class="font-editorial text-base font-bold text-ink mt-1">Ventes en ligne</h3>
+          <p class="text-sm text-muted mt-1.5">Analyse et storytelling dans Excel.</p>
+        </div>
+        <div class="bg-white rounded-xl border border-stone-200 p-5 shadow-card">
+          <span class="text-xs font-semibold text-petrol">SQL</span>
+          <h3 class="font-editorial text-base font-bold text-ink mt-1">Logement</h3>
+          <p class="text-sm text-muted mt-1.5">Requêtes SQL d'analyse de marché.</p>
+        </div>
+        <div class="bg-white rounded-xl border border-stone-200 p-5 shadow-card">
+          <span class="text-xs font-semibold text-petrol">Python</span>
+          <h3 class="font-editorial text-base font-bold text-ink mt-1">Optimisation d'une boutique</h3>
+          <p class="text-sm text-muted mt-1.5">Nettoyage et analyses multivariées en Python.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PARCOURS ==================== -->
+  <section id="parcours" class="py-16 sm:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+      <div class="max-w-3xl reveal">
+        <span class="text-xs font-bold uppercase tracking-widest text-bordeaux">08 • Expériences</span>
+        <h2 class="font-editorial text-2xl sm:text-3xl lg:text-4xl font-bold text-ink mt-2">Parcours</h2>
+      </div>
+      <ul class="max-w-3xl border-l-2 border-stone-300 ml-1.5 space-y-8 reveal">
+        <li class="relative pl-7">
+          <span class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-bordeaux"></span>
+          <h3 class="font-editorial text-lg font-bold text-ink">Formation Data Analyst</h3>
+          <p class="text-xs text-muted">OpenClassrooms · promotion 2025/2026</p>
+          <p class="text-sm text-muted mt-1.5 leading-relaxed">Projets en Python, SQL, Power BI et machine learning.</p>
+        </li>
+        <li class="relative pl-7">
+          <span class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-bordeaux"></span>
+          <h3 class="font-editorial text-lg font-bold text-ink">Consultante formatrice Sage</h3>
+          <p class="text-xs text-muted">2009–2021</p>
+          <p class="text-sm text-muted mt-1.5 leading-relaxed">Paie RH, comptabilité, gestion commerciale : paramétrage, déploiement SQL, formation des équipes.</p>
+        </li>
+        <li class="relative pl-7">
+          <span class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-bordeaux"></span>
+          <h3 class="font-editorial text-lg font-bold text-ink">Cheffe comptable, Coca-Cola</h3>
+          <p class="text-xs text-muted">1999–2003</p>
+          <p class="text-sm text-muted mt-1.5 leading-relaxed">Reporting financier, clôtures, supervision de filiales.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ==================== CONTACT ==================== -->
+  <section id="contact" class="py-16 sm:py-20 bg-creamDark/60 border-t border-stone-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl reveal">
+        <span class="text-xs font-bold uppercase tracking-widest text-bordeaux">09 • Contact</span>
+        <h2 class="font-editorial text-2xl sm:text-3xl lg:text-4xl font-bold text-ink mt-2">Me contacter</h2>
+        <p class="text-muted text-sm sm:text-base mt-3 leading-relaxed">Disponible pour des missions en analyse de données, reporting financier et consulting Sage.</p>
+        <div class="flex flex-wrap gap-3 mt-6">
+          <a href="mailto:ton.email@exemple.fr" class="px-6 py-3 rounded-xl bg-bordeaux hover:bg-bordeaux-dark text-white font-semibold text-sm transition">Écrire un e-mail</a>
+          <a href="https://www.linkedin.com/in/naima-boutrah/" target="_blank" rel="noopener" class="px-6 py-3 rounded-xl bg-white hover:bg-creamDark text-ink border border-stone-300 font-semibold text-sm transition">LinkedIn</a>
+          <a href="https://github.com/naima60/analyse_donnees_bottleneck" target="_blank" rel="noopener" class="px-6 py-3 rounded-xl bg-white hover:bg-creamDark text-ink border border-stone-300 font-semibold text-sm transition">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ==================== FOOTER ==================== -->
   <footer class="bg-ink text-stone-300 border-t border-stone-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -1041,7 +1105,7 @@ schema_bottleneck = pa.DataFrameSchema({
       </div>
 
       <div class="mt-8 pt-6 border-t border-stone-800/90 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-stone-500">
-        <span>Réalisé avec Python (Pandas, DuckDB, Pandera) • Visualisation analytique interactive</span>
+        <span>Réalisé avec Python (Pandas, DuckDB) • Visualisation analytique interactive</span>
         <span>Naima Boutrah — Portfolio Data Analyst 2025/2026 • Étude de cas BottleNeck</span>
       </div>
     </div>
@@ -1079,29 +1143,7 @@ schema_bottleneck = pa.DataFrameSchema({
 
       revealElements.forEach(el => observer.observe(el));
 
-      // 3. Copie du code pipeline dans le presse-papiers
-      const copyCodeBtn = document.getElementById('copy-code-btn');
-      const copyCodeLabel = document.getElementById('copy-code-label');
-      const pipelineCode = document.getElementById('pipeline-code');
-
-      copyCodeBtn.addEventListener('click', () => {
-        const textArea = document.createElement('textarea');
-        textArea.value = pipelineCode.innerText;
-        document.body.appendChild(textArea);
-        textArea.select();
-        try {
-          document.execCommand('copy');
-          copyCodeLabel.textContent = 'Copié !';
-          setTimeout(() => {
-            copyCodeLabel.textContent = "Copier l'extrait";
-          }, 2000);
-        } catch (e) {
-          copyCodeLabel.textContent = 'Erreur copie';
-        }
-        document.body.removeChild(textArea);
-      });
-
-      // 4. Données et Filtrage de l'Explorateur d'Anomalies
+      // 3. Données et Filtrage de l'Explorateur d'Anomalies
       const anomaliesData = [
         {
           id: 'ID 4355',
@@ -1166,7 +1208,7 @@ schema_bottleneck = pa.DataFrameSchema({
           marge: 'Invalide',
           margeClass: 'text-red-700 font-bold',
           stock: '19 en stock',
-          action: 'Inversion de signe lors de l’import ERP : corriger en +9,10 € et activer Check > 0.'
+          action: 'Inversion de signe lors de l’import ERP : corriger en +9,10 €.'
         },
         {
           id: 'ID 4973',
@@ -1276,10 +1318,9 @@ schema_bottleneck = pa.DataFrameSchema({
         });
       });
 
-      // Rendu initial du tableau
       renderAnomalies('all');
 
-      // 5. Gestion des Onglets Section 5 (Veille, CdC, Formation, Hypothèses)
+      // 5. Gestion des Onglets Section 5
       const tabBtns = document.querySelectorAll('.tab-btn');
       const tabPanels = document.querySelectorAll('.tab-panel');
 
@@ -1307,7 +1348,6 @@ schema_bottleneck = pa.DataFrameSchema({
       Chart.defaults.font.family = "'Plus Jakarta Sans', sans-serif";
       Chart.defaults.color = '#5C554E';
 
-      // Graphique 1 : Répartition et Valorisation du Stock (Donut)
       const ctxStock = document.getElementById('stockChart').getContext('2d');
       new Chart(ctxStock, {
         type: 'doughnut',
@@ -1351,7 +1391,6 @@ schema_bottleneck = pa.DataFrameSchema({
         }
       });
 
-      // Graphique 2 : Taux de Marge Brute par Famille (Barres Verticales)
       const ctxMargin = document.getElementById('marginChart').getContext('2d');
       new Chart(ctxMargin, {
         type: 'bar',
@@ -1408,7 +1447,6 @@ schema_bottleneck = pa.DataFrameSchema({
         }
       });
 
-      // Graphique 3 : Répartition des 124 Anomalies (Barres Horizontales)
       const ctxAnomalies = document.getElementById('anomaliesChart').getContext('2d');
       new Chart(ctxAnomalies, {
         type: 'bar',
